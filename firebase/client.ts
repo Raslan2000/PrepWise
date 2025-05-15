@@ -1,6 +1,6 @@
-import {cert, getApp, getApps, initializeApp} from "firebase-admin/app";
-import {getAuth} from "firebase-admin/auth";
-import {getFirestore} from "firebase-admin/firestore";
+import { getApp, getApps, initializeApp} from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyDNHKZJ8TSkNqYnZzfJTHDJ_g0gyeCwrEs",
   authDomain: "prepwise-b493f.firebaseapp.com",
@@ -12,6 +12,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = !getApps.length? initializeApp(firebaseConfig): getApp()
-export const auth = getAuth(app)
-export const db = getFirestore(app)
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
+export const auth = getAuth(app);
+export const db = getFirestore(app);

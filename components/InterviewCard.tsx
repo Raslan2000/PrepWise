@@ -21,7 +21,7 @@ const InterviewCard = ({interviewId, userId, role, type, techstack, createdAt}: 
             </h3>
             <div className='flex flex-row gap-5 mt-3'>
                 <div className='flex flex-row gap-2'>
-                    <Image src="/calender.svg" alt="calender" width = {22} height = {22}/>
+                    <Image src="/calendar.svg" alt="calender" width = {22} height = {22}/>
                     <p>{formattedDate}</p>
                     <div className='flex flex-row gap-2 item-center'>
                             <Image src="/star.svg" alt="star" width = {22} height = {22}/>
